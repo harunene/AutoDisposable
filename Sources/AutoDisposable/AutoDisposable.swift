@@ -9,7 +9,7 @@
 import RxSwift
 import UIKit
 
-public protocol AutoDisposable: class {
+public protocol AutoDisposable: AnyObject {
     
     /// You must dispose these subscribtions from  place where you need. `deinit` method should be a good place.
     var subscriptions: [Disposable] { get set }

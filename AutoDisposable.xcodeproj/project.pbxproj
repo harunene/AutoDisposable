@@ -3,29 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E7091A72337712D008C5CDA /* AutoDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E7091A52337712D008C5CDA /* AutoDisposable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0E7091B32337826F008C5CDA /* Single+Autodispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091AD2337826E008C5CDA /* Single+Autodispose.swift */; };
 		0E7091B42337826F008C5CDA /* Disposable+AutoDispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091AE2337826E008C5CDA /* Disposable+AutoDispose.swift */; };
 		0E7091B52337826F008C5CDA /* AutoDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091AF2337826E008C5CDA /* AutoDisposable.swift */; };
 		0E7091B62337826F008C5CDA /* Driver+Autodispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091B02337826E008C5CDA /* Driver+Autodispose.swift */; };
 		0E7091B72337826F008C5CDA /* ObservableType+Autodispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091B12337826F008C5CDA /* ObservableType+Autodispose.swift */; };
 		0E7091B82337826F008C5CDA /* Completable+Autodispose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7091B22337826F008C5CDA /* Completable+Autodispose.swift */; };
+		F2630AEF2891242700DE53A2 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F2630AEE2891242700DE53A2 /* RxCocoa */; };
+		F2630AF12891242700DE53A2 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F2630AF02891242700DE53A2 /* RxRelay */; };
+		F2630AF32891242700DE53A2 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2630AF22891242700DE53A2 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E7091A22337712D008C5CDA /* AutoDisposable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoDisposable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E7091A52337712D008C5CDA /* AutoDisposable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoDisposable.h; sourceTree = "<group>"; };
-		0E7091A62337712D008C5CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E7091AD2337826E008C5CDA /* Single+Autodispose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Single+Autodispose.swift"; sourceTree = "<group>"; };
 		0E7091AE2337826E008C5CDA /* Disposable+AutoDispose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disposable+AutoDispose.swift"; sourceTree = "<group>"; };
 		0E7091AF2337826E008C5CDA /* AutoDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDisposable.swift; sourceTree = "<group>"; };
 		0E7091B02337826E008C5CDA /* Driver+Autodispose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Driver+Autodispose.swift"; sourceTree = "<group>"; };
 		0E7091B12337826F008C5CDA /* ObservableType+Autodispose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Autodispose.swift"; sourceTree = "<group>"; };
 		0E7091B22337826F008C5CDA /* Completable+Autodispose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Completable+Autodispose.swift"; sourceTree = "<group>"; };
+		F2CFEDD12891103D00D4A892 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2630AF32891242700DE53A2 /* RxSwift in Frameworks */,
+				F2630AF12891242700DE53A2 /* RxRelay in Frameworks */,
+				F2630AEF2891242700DE53A2 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +46,8 @@
 		0E7091982337712D008C5CDA = {
 			isa = PBXGroup;
 			children = (
-				0E7091A42337712D008C5CDA /* AutoDisposable */,
+				F2CFEDD12891103D00D4A892 /* Package.swift */,
+				0E7091A42337712D008C5CDA /* Sources */,
 				0E7091A32337712D008C5CDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,25 +60,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0E7091A42337712D008C5CDA /* AutoDisposable */ = {
+		0E7091A42337712D008C5CDA /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0E7091BA2337FE5C008C5CDA /* Souces */,
-				0E7091B9233794D8008C5CDA /* SupportingFiles */,
+				0E7091BA2337FE5C008C5CDA /* AutoDisposable */,
 			);
-			path = AutoDisposable;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		0E7091B9233794D8008C5CDA /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				0E7091A52337712D008C5CDA /* AutoDisposable.h */,
-				0E7091A62337712D008C5CDA /* Info.plist */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		0E7091BA2337FE5C008C5CDA /* Souces */ = {
+		0E7091BA2337FE5C008C5CDA /* AutoDisposable */ = {
 			isa = PBXGroup;
 			children = (
 				0E7091AF2337826E008C5CDA /* AutoDisposable.swift */,
@@ -83,7 +78,7 @@
 				0E7091B12337826F008C5CDA /* ObservableType+Autodispose.swift */,
 				0E7091AD2337826E008C5CDA /* Single+Autodispose.swift */,
 			);
-			path = Souces;
+			path = AutoDisposable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +88,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E7091A72337712D008C5CDA /* AutoDisposable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +108,11 @@
 			dependencies = (
 			);
 			name = AutoDisposable;
+			packageProductDependencies = (
+				F2630AEE2891242700DE53A2 /* RxCocoa */,
+				F2630AF02891242700DE53A2 /* RxRelay */,
+				F2630AF22891242700DE53A2 /* RxSwift */,
+			);
 			productName = AutoDisposable;
 			productReference = 0E7091A22337712D008C5CDA /* AutoDisposable.framework */;
 			productType = "com.apple.product-type.framework";
@@ -142,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 0E7091982337712D008C5CDA;
+			packageReferences = (
+				F2630AED2891242700DE53A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 0E7091A32337712D008C5CDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,7 +310,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AutoDisposable/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutoDisposable/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,7 +338,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AutoDisposable/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/AutoDisposable/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,6 +377,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2630AED2891242700DE53A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F2630AEE2891242700DE53A2 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2630AED2891242700DE53A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F2630AF02891242700DE53A2 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2630AED2891242700DE53A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F2630AF22891242700DE53A2 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2630AED2891242700DE53A2 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E7091992337712D008C5CDA /* Project object */;
 }

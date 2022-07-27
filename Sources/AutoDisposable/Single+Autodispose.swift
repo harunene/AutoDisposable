@@ -28,8 +28,8 @@ public extension PrimitiveSequenceType where Trait == SingleTrait {
      - parameter onError: Action to invoke upon errored termination of the observable sequence.
      - returns: Subscription object used to unsubscribe from the observable sequence.
      */
-    func subscribeWithAutoDispose(_ target: AutoDisposable, onSuccess: ((Element) -> Void)? = nil, onError: ((Swift.Error) -> Void)? = nil) {
-        let disposable = subscribe(onSuccess: onSuccess, onError: onError)
+    func subscribeWithAutoDispose(_ target: AutoDisposable, onSuccess: ((Element) -> Void)? = nil, onFailure: ((Swift.Error) -> Void)? = nil) {
+        let disposable = subscribe(onSuccess: onSuccess, onFailure: onFailure)
         target.subscriptions.append(disposable)
     }
 }

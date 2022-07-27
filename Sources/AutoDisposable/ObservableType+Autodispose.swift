@@ -57,7 +57,7 @@ public extension ObservableType {
      - returns: Subscription object used to unsubscribe from the observable sequence.
      */
     func bindWithAutoDispose(_ target: AutoDisposable, onNext: @escaping (Element) -> Void) {
-        let disposable = self.observeOn(MainScheduler()).bind(onNext: onNext)
+        let disposable = self.observe(on: MainScheduler()).bind(onNext: onNext)
         target.subscriptions.append(disposable)
     }
     
@@ -70,7 +70,7 @@ public extension ObservableType {
      - returns: Disposable object that can be used to unsubscribe the observers.
      */
     private func bind<Observer: ObserverType>(to observers: [Observer]) -> Disposable where Observer.Element == Element {
-        return self.observeOn(MainScheduler()).subscribe { event in
+        return self.observe(on: MainScheduler()).subscribe { event in
             observers.forEach { $0.on(event) }
         }
     }
